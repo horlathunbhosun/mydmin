@@ -1,0 +1,137 @@
+.purchase {
+    background: linear-gradient(0deg, rgba(16, 121, 153, 0.8), rgba(16, 121, 153, 0.8)), url(../img/purchase-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.purchaseForm {
+    position: relative;
+    min-height: 110vh;
+
+    &__next {
+        visibility: hidden;
+    }
+
+    .main-form__wrapper {
+        padding: 4rem;
+    }
+
+    .main-form__title {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    &__wrapper {
+        display: block;
+        transition: 0.5s ease-in-out all;
+
+        &.remove {
+            display: none;
+            transition: 0.5s ease-in-out all;
+        }
+    }
+
+    &__summary {
+        display: block;
+        transition: 0.5s ease-in-out all;
+
+        &.remove {
+            display: none;
+            transition: 0.5s ease-in-out all;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+
+        @media (max-width: 500px){
+            flex-direction: column;
+        }
+    }
+
+    &__selection {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 500px){
+            flex-direction: column;
+        }
+    }
+
+    &__flag {
+        max-width: 60px;
+        height: 60px;
+        margin-right: 1rem;
+    }
+
+    &__info {
+        span {
+            display: flex;
+            color: var(--grey);
+        }
+
+        h3 {
+            color: var(--dark);
+            font-size: clamp(2rem, calc(3vw-1rem), 4rem);
+        }
+
+        @media (max-width: 500px){
+            text-align: center;
+
+            span,h3 {
+                margin-top: 1rem 0;
+            }
+        }
+    }
+
+    &__price {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--dark);
+    }
+
+    &__notif {
+        margin-top: 5rem;
+        background-color: hsla(194, 81%, 33%, 0.1);
+        padding: 1rem 3rem;
+        border-radius: 30px;
+        width: 100%;
+        color: var(--blue);
+        text-align: center;
+    }
+
+    &__wyg {
+        margin-top: 4rem;
+        &-title {
+            color: var(--dark);
+            font-size: clamp(2rem, calc(3vw-1rem), 4rem);
+        }
+    }
+
+    &__list {
+        list-style: none;
+        list-style-image: url(../img/box.svg);
+        list-style-position: inside;
+        visibility: hidden;
+        display: none;
+
+        &-item {
+            margin: 2rem 0;
+        }
+
+        &.show {
+            visibility: visible;
+            display: block;
+        }
+    }
+
+    &__action {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+    }
+}
